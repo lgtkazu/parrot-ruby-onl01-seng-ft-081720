@@ -1,6 +1,6 @@
-require_relative './spec_helper'
-require_relative '../parrot.rb' # Code your solution in this file
-
+def parrot(ste="Squawk!")
+  puts ste
+  
 describe '#parrot' do
   it 'should output "Squawk!" to the terminal when called without any arguments' do
     expect($stdout).to receive(:puts).with("Squawk!")
@@ -18,8 +18,9 @@ describe '#parrot' do
   end
 
   it 'should return the given phrase when called with an argument' do
-    phrase = parrot("Pretty bird!")
+    phrase = parrot("Squawk!")
 
-    expect(phrase).to eq("Pretty bird!")
+    expect(phrase).to eq("Squawk!")
   end
+end
 end
